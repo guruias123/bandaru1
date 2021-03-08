@@ -22,7 +22,9 @@ function App() {
   
   return(
     <BrowserRouter>
+    
     <div className="grid-container">
+        
     <header className="header">
         <div className="brand">
             <button onClick={openMenu}>
@@ -60,6 +62,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path="/carts" component={CartScreen}/>
             <Route path='/orders' component={OrderScreen}/>
+            
         </div>
         
     </main>

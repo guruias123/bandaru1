@@ -13,7 +13,7 @@ const HomeScreen=(props)=>{
 
         return(
           <>
-          
+          <div className='col-sm-4'>
           <ul className="products">
          
               <li>
@@ -29,6 +29,7 @@ const HomeScreen=(props)=>{
             </li> 
           
         </ul>
+        </div>
         </>
   )
       })

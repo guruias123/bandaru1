@@ -7,8 +7,9 @@ function Home (props) {
     return(
         
         <React.Fragment>
-            <div className='carosal'>
-             <div className="container">
+          
+            <div className='corosal'>
+             <div className="col-sm-12">
     
     <div id="myCarousel" className="carousel slide" data-ride="carousel">
       
@@ -25,23 +26,14 @@ function Home (props) {
         </div>
   
         <div className="item">
-         <Link to='/home1'> <img src="https://www.arlisman.com/wp-content/uploads/2019/02/Pants-Series-Banner.jpg" alt="Pants" style={{width:'73%',height:'100%'}}/></Link>
+         <Link to='/home1'> <img src="https://www.arlisman.com/wp-content/uploads/2019/02/Pants-Series-Banner.jpg" alt="Pants" style={{width:'72.5%',height:'100%'}}/></Link>
         </div>
       
         <div className="item">
-          <Link to='/home'><img src="https://s3-ap-southeast-1.amazonaws.com/sailor-prod/images/thumbs/0000556.jpeg" alt="Shirts" style={{width:'88%',height:'95%'}}/></Link>
+          <Link to='/home'><img src="https://s3-ap-southeast-1.amazonaws.com/sailor-prod/images/thumbs/0000556.jpeg" alt="Shirts" style={{width:'88%',height:'100%'}}/></Link>
         </div>
-        <h2 style={{marginLeft:'30%'}}>YOUR SHOPPING ITEMS</h2>
-        <div className='img1'>
-                <Link to='/home'><img className='img2' src='/images/d1.jpg' style={{width:'100%', height:'40%'}}/></Link>
-                <div className="desc">Branded Shirts</div>
-            </div>
-            <div className='img1'>
-                <Link to='/home1'><img className='img2' src='http://cdn.shopify.com/s/files/1/0231/8024/7118/products/Me-002020_Approach_Pant_Me-01011_Shadow_Grey_grande.png?v=1585664778' style={{width:'300px', height:'436px'}}/></Link>
-                <div className="desc">Branded Pants</div>
-            </div>
+        
       </div>
-  
       
       <a className="left carousel-control" href="#myCarousel" data-slide="prev">
         <span className="glyphicon glyphicon-chevron-left"></span>
@@ -52,9 +44,24 @@ function Home (props) {
         <span classNameName="sr-only">Next</span>
       </a>
     </div>
-  </div>
+  
   
   </div>
+     <div ><h2 style={{marginLeft:'40%',marginTop:'2%',paddingTop:'1%',color:'#203840',fontFamily:'serif'}}>YOUR SHOPPING ITEMS</h2></div>
+        <div className='col-sm-4'>
+        
+        <div className='img1'>
+                <Link to='/home'><img className='img2' src='/images/d1.jpg' style={{width:'100%', height:'40%'}}/></Link>
+                <div className="desc">Branded Shirts</div>
+        </div>
+        </div>
+        <div className='col-sm-4'>
+            <div className='img1'>
+                <Link to='/home1'><img className='img2' src='http://cdn.shopify.com/s/files/1/0231/8024/7118/products/Me-002020_Approach_Pant_Me-01011_Shadow_Grey_grande.png?v=1585664778' style={{width:'300px', height:'436px'}}/></Link>
+                <div className="desc">Branded Pants</div>
+            </div>
+          </div>
+           </div>
            
         </React.Fragment>
     )

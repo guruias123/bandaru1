@@ -44,6 +44,7 @@ class OrderScreen extends Component{
                         data.map(item=>{
                               return(
                                     <>
+                                    <div className='col-sm-12'>
                                     <div className='cart'>
                                                 <img className='img' src={item.image1}/>
                                                 <div className='name'><h1 style={{fontSize:'800%'}}>{item.name1}</h1></div>
@@ -51,6 +52,7 @@ class OrderScreen extends Component{
                                                 <div className='authname'><h2 style={{fontSize:'800%'}}>Qty : {item.keyword1} <button style={{marginLeft:'50%',backgroundColor:'red',color:'white',}}  onClick={()=>this.handle1submit(item._id)}>cancel</button></h2></div>                                                
                                                 <div className='price'><h2 style={{fontSize:'800%'}}>total price : ${this.product(item.keyword1,item.cost1)} </h2></div>  
                                                 
+                                    </div>
                                     </div>
                                     </>                           
                               )

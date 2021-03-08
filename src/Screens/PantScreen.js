@@ -10,7 +10,7 @@ const PantScreen=(props)=>{
       pants.map((item)=>{
         return(
           <>
-          
+          <div className='col-sm-4'>
           <ul className="products">
          
               <li>
@@ -26,6 +26,7 @@ const PantScreen=(props)=>{
             </li> 
           
         </ul>
+        </div>
         </>
   )
       })

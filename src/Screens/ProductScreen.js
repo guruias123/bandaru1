@@ -89,6 +89,7 @@ class ProductScreen extends Component{
                               
                               return(
                                     <React.Fragment>
+                                          
                                     <div className='back-to-result'>
                                           <Link  to='/home'>Back to result</Link>
                                     </div>
