@@ -85,7 +85,15 @@ class CartScreen extends Component{
             )
            }else{
                  return(
-                 <h2>Please Signin <App1 /></h2>
+                       <>
+                 <h2 style={{textAlign:'center'}}>Please Signin </h2>
+                 <div style={{marginLeft:'620px'}}>
+                       <App1/> 
+                  </div>
+                  <div style={{marginLeft:'500px',marginTop:'5%'}}>
+                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMNHKc-gjxEs6nDcwuWevuELZpdhWxN2b0Tw&usqp=CAU' />
+                  </div>
+                  </>
                  )
            }
       }
