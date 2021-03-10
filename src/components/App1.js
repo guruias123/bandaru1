@@ -21,14 +21,17 @@ export class App1 extends Component {
        sessionStorage.setItem('name',response.googleId)
        
       }
+      AllowCookies=()=>{
+        alert('Please allow cookies')
+      }
        
   render() {
     if(this.state.User==''){
       return (
         <div style={{height:'0px',width:'30px',borderRadius:'30%',marginRight:'50px',marginBottom:'30px',marginTop:'0px'}}>
           <GoogleLogin 
-          // 664272560437-bv5m7ds2tkc5mau9fbu6mg9kt9uaqh1o.apps.googleusercontent.com
-          clientId="664272560437-6609p3ccson4trdnnp6u6uqdq0poef0i.apps.googleusercontent.com"
+          // 664272560437-bv5m7ds2tkc5mau9fbu6mg9kt9uaqh1o.apps.googleusercontent.com //664272560437-6609p3ccson4trdnnp6u6uqdq0poef0i.apps.googleusercontent.com
+          clientId="664272560437-bv5m7ds2tkc5mau9fbu6mg9kt9uaqh1o.apps.googleusercontent.com"
           buttonText ="Login" 
           onSuccess={this.responseGoogle} 
           onFailure={this.responseGoogle}

@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Route,Link} from 'react-router-dom'
 import './CartScreen.css'
-
+import App1 from './App1'
 const url='https://amazon1543.herokuapp.com/cart1?login1='
 const CartUrl='https://amazon1543.herokuapp.com/removeItem'
 class CartScreen extends Component{
@@ -64,6 +64,7 @@ class CartScreen extends Component{
             }else{
                   return(
                         <>
+                        
                        <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'2%'}}/>
                         {/* <p style={{marginLeft:'80%', marginTop:'.5%'}}><Route exact path='/' component={App1}/></p> */}
                         </>
@@ -72,14 +73,21 @@ class CartScreen extends Component{
       }
       render(){
             
-           
+           if(this.state.carts){
             return(
                         <>
-                        
-                        <h1 style={{font:'status-bar',fontSize:'200%',color:'white',backgroundColor:'#203840',width:'100%'}}>Your Carts</h1>
-                        {this.cart(this.state.carts)}
+                          
+                              <h1 style={{font:'status-bar',fontSize:'200%',color:'white',backgroundColor:'#203840',width:'100%'}}>Your Carts</h1>
+                              {this.cart(this.state.carts)}
+                              
+
                         </>
             )
+           }else{
+                 return(
+                 <h2>Please Signin <App1 /></h2>
+                 )
+           }
       }
       
 }

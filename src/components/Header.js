@@ -25,7 +25,7 @@ const Header =()=>{
             </ul>
             
             <ul class="nav navbar-nav navbar-right">
-              <li style={{ marginTop:'0%'}}><a href="/"><p ><Route  path='/' component={App1}/></p> </a></li>
+              <li style={{ marginTop:'0%'}}><a href="/"><p><App1/></p> </a></li>
               <li><a href="/carts"> Cart</a></li>
             </ul>
           </div>
