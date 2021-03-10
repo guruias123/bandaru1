@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
-import '../index.css'
 
 
 
-const url = 'https://amazon1543.herokuapp.com/pants/'
+
+const url = 'https://amazon1543.herokuapp.com/shirts/'
 const carturl = 'https://amazon1543.herokuapp.com/cart'
-class Pant1Screen extends Component{
+class ShirtSub extends Component{
       
       constructor(){
             super()
@@ -24,8 +24,7 @@ class Pant1Screen extends Component{
                         image1 : '',
                         cost1 : '',
                         login1 : '',
-                        authname: '',
-                        authimg :'',
+                       
                   }
             }
       }
@@ -83,20 +82,21 @@ class Pant1Screen extends Component{
               
               
         }
-      pant = (data)=>{
+      shirt = (data)=>{
             if(data){
                  return(
                         data.map((product)=>{
                               
                               return(
                                     <React.Fragment>
+                                          
                                     <div className='back-to-result'>
-                                          <Link  to='/home1/:id'>Back to result</Link>
+                                          <Link  to='/home'>Back to result</Link>
                                     </div>
                                     <div className='details'>
                                           <div className='details-image' >
                                             
-                                                <img style={{height:'20%'}} src={product.image}    onLoad={()=>{this.handleImg(product.image)}} />
+                                                <img style={{height:'50%'}} src={product.image}    onLoad={()=>{this.handleImg(product.image)}} />
                                           </div>
                                           <div className='details-info' >
                                                 <ul>
@@ -146,23 +146,22 @@ class Pant1Screen extends Component{
                  
             }else{
                   return(
-                      <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'2%'}} />
+                      <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'10%'}} />
                       
                   )
             }
       }
       
       render(){
-            
+            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',this.state.cart.image)
            
             return(
                         <>
                         
-                        {this.pant(this.state.shirts1)}
+                        {this.shirt(this.state.shirts1)}
                         
                         </>
             )
       }
 }
-
-export default Pant1Screen;
+export default ShirtSub;

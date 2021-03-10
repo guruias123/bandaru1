@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
-import '../index.css'
+import './PantSub.css'
 
 
 
-const url = 'https://amazon1543.herokuapp.com/shirts/'
+const url = 'https://amazon1543.herokuapp.com/pants/'
 const carturl = 'https://amazon1543.herokuapp.com/cart'
-class ProductScreen extends Component{
+class PantSub extends Component{
       
       constructor(){
             super()
@@ -24,7 +24,8 @@ class ProductScreen extends Component{
                         image1 : '',
                         cost1 : '',
                         login1 : '',
-                       
+                        authname: '',
+                        authimg :'',
                   }
             }
       }
@@ -82,21 +83,20 @@ class ProductScreen extends Component{
               
               
         }
-      shirt = (data)=>{
+      pant = (data)=>{
             if(data){
                  return(
                         data.map((product)=>{
                               
                               return(
                                     <React.Fragment>
-                                          
                                     <div className='back-to-result'>
-                                          <Link  to='/home'>Back to result</Link>
+                                          <Link  to='/home1/:id'>Back to result</Link>
                                     </div>
                                     <div className='details'>
                                           <div className='details-image' >
                                             
-                                                <img style={{height:'50%'}} src={product.image}    onLoad={()=>{this.handleImg(product.image)}} />
+                                                <img style={{height:'20%'}} src={product.image}    onLoad={()=>{this.handleImg(product.image)}} />
                                           </div>
                                           <div className='details-info' >
                                                 <ul>
@@ -136,6 +136,7 @@ class ProductScreen extends Component{
                                                          <li >
                                                                <Link to="/carts"><button className='button' onClick={this.handleSubmit}>Add to Cart</button></Link>
                                                          </li>
+                                                         
                                                    </ul>   
                                                 </div>
                                     </div>
@@ -146,86 +147,23 @@ class ProductScreen extends Component{
                  
             }else{
                   return(
-                      <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'10%'}} />
+                      <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'2%'}} />
                       
                   )
             }
       }
       
       render(){
-            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',this.state.cart.image)
+            
            
             return(
                         <>
                         
-                        {this.shirt(this.state.shirts1)}
+                        {this.pant(this.state.shirts1)}
                         
                         </>
             )
       }
 }
 
-/*function ProductScreen(props){
-      const id=props.match.params.id
-      const product=data.products[id]
-      // console.log( '>>>>>',product.name)
-      // console.log(props.match.params.id)
-        return(
-               
-            <React.Fragment>
-                  <div className='back-to-result'>
-                        <Link  to='/'>Back to result</Link>
-                  </div>
-                  <div className='details'>
-                        <div className='details-image'>
-                              <img src={product.image}/>
-                        </div>
-                        <div className='details-info'>
-                              <ul>
-                                   <li>
-                                          <h4>{product.name}</h4>
-                                    </li> 
-                              
-                                    <li>
-                                         <b>${product.cost}</b> 
-                                    </li>
-                                    <li>
-                                          {product.rating} stars ({product.numReviews} Reviews)
-                                    </li>
-                                    <li>
-                                          Description:
-                                          <div>
-                                                {product.description}
-                                          </div>
-                                    </li>
-                              </ul>
-                        
-                        </div>
-                        <div className='details-action'>
-                                 <ul>
-                                       <li>
-                                             cost:${product.cost}
-                                       </li>
-                                       <li>
-                                             Status:{product.status}
-                                       </li>
-                                       <li>
-                                             Qty: <select>
-                                                   <option>1</option>
-                                                   <option>2</option>
-                                                   <option>3</option>
-                                                   <option>4</option>
-                                             </select>
-                                       </li>
-                                       <li >
-                                             <button className='button'>Add to Cart</button>
-                                       </li>
-                                 </ul>   
-                              </div>
-                  </div>
-            </React.Fragment>
-         
-       )
-        
-}*/
-export default ProductScreen;
+export default PantSub;

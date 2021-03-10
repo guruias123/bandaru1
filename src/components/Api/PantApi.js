@@ -1,16 +1,10 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom';
-
-
-import PantScreen from './PantScreen';
-
-
-
+import {React, Component} from 'react'
+import PantScreen from '../Screens/PantScreen'
 
 
 const panturl ="https://amazon1543.herokuapp.com/pants"
 
-class PantScreenApi extends Component{
+class PantApi extends Component{
       constructor(){
             super()
                   this.state={
@@ -35,4 +29,4 @@ class PantScreenApi extends Component{
             }
 }
 
-export default PantScreenApi;
+export default PantApi;

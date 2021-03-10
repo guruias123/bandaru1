@@ -34,6 +34,8 @@ class OrderScreen extends Component{
             body:JSON.stringify(myobj)
             
             }) 
+            var GID=sessionStorage.getItem('name');
+            fetch(`${url}${GID}`,{method:'GET'}).then((res)=>res.json()).then((data)=>this.setState({carts:data}))
       }
       
      
@@ -44,6 +46,7 @@ class OrderScreen extends Component{
                         data.map(item=>{
                               return(
                                     <>
+                                    
                                     <div className='col-sm-12'>
                                     <div className='cart'>
                                                 <img className='img' src={item.image1}/>

@@ -1,13 +1,15 @@
-
 import {Link} from 'react-router-dom'
-import '../index.css'
 
-const PantScreen=(props)=>{
+
+const ShirtScreen=(props)=>{
   
-  const pant=({pants})=>{
-    if(pants){
+  const shirt=({shirts})=>{
+    if(shirts){
+      
   return(
-      pants.map((item)=>{
+      
+      shirts.map((item)=>{
+
         return(
           <>
           <div className='col-sm-4'>
@@ -15,10 +17,10 @@ const PantScreen=(props)=>{
          
               <li>
                 <div className="product">
-                    <Link to={'/home1/pant/' + item._id}><img className="product-image" src={item.image} alt="product"/></Link>
+                    <Link to={'/home/product/' + item._id}><img className="product-image" src={item.image} alt="product"/></Link>
                     
                     <div className="product-name">
-                    <Link to={'/home1/pant/' + item._id}>{item.name}</Link></div>
+                    <Link to={'/home/product/' + item._id}>{item.name}</Link></div>
                     <div className="product-brand">{item.brand}</div>
                     <div className="product-price">${item.cost}</div>
                     <div className="product-rating">{item.rating}Stars ({item.numReviews})Reviews</div>
@@ -34,18 +36,18 @@ const PantScreen=(props)=>{
     }  
     else{
       return(
-        <img src='/images/loader.gif' style={{height:'320px', width:'420px',marginTop:'2%'}} />
+        <img src='/images/loader.gif' height='320px' width='420px' />
         
     )
     }  
 }
     return(
       <>
-        {pant(props)}
+        
+        {shirt(props)}
       </>
     )
   
 }
 
-export default PantScreen;
-
+export default ShirtScreen;

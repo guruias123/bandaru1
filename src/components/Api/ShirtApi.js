@@ -1,15 +1,14 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom';
+import ShirtScreen from '../Screens/ShirtScreen';
 
-import HomeScreen from './HomeScreen'
-import PantScreen from './PantScreen';
+
 
 
 
 
 const url ="https://amazon1543.herokuapp.com/shirts"
 
-class ProductScreenApi extends Component{
+class ShirtApi extends Component{
       constructor(){
             super()
                   this.state={
@@ -26,11 +25,11 @@ class ProductScreenApi extends Component{
            
             return(
                   <>
-                <HomeScreen shirts={this.state.shirts}/>
+                <ShirtScreen shirts={this.state.shirts}/>
                 
                 </>
             )
             }
 }
 
-export default ProductScreenApi;
+export default ShirtApi;
