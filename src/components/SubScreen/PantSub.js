@@ -4,7 +4,7 @@ import './PantSub.css'
 
 
 
-const url = 'https://amazon1543.herokuapp.com/pants/'
+const url = 'https://amazon1543.herokuapp.com/shirts/'
 const carturl = 'https://amazon1543.herokuapp.com/cart'
 class PantSub extends Component{
       

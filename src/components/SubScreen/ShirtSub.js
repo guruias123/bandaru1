@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 
 
-const url = 'https://amazon1543.herokuapp.com/shirts/'
+const url = 'https://amazon1543.herokuapp.com/pants/'
 const carturl = 'https://amazon1543.herokuapp.com/cart'
 class ShirtSub extends Component{
       

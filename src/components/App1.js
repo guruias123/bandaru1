@@ -28,7 +28,7 @@ export class App1 extends Component {
   render() {
     if(this.state.User==''){
       return (
-        <div style={{height:'0px',width:'30px',borderRadius:'30%',marginRight:'50px',marginBottom:'30px',marginTop:'0px'}}>
+        <div style={{height:'5px',width:'30px',borderRadius:'30%',marginRight:'50px',marginBottom:'15px',marginTop:'2.5px'}}>
           <GoogleLogin 
           // 664272560437-bv5m7ds2tkc5mau9fbu6mg9kt9uaqh1o.apps.googleusercontent.com //664272560437-6609p3ccson4trdnnp6u6uqdq0poef0i.apps.googleusercontent.com
           clientId="664272560437-bv5m7ds2tkc5mau9fbu6mg9kt9uaqh1o.apps.googleusercontent.com"
@@ -43,7 +43,7 @@ export class App1 extends Component {
 
       return(
         <React.Fragment>
-           <img style={{height:'30px',width:'30px',borderRadius:'50%'}} src={this.state.User.imageUrl}/>
+           <img style={{height:'30px',width:'30px',borderRadius:'50%',marginTop:'10px'}} src={this.state.User.imageUrl}/>
         </React.Fragment>
       )
     }
